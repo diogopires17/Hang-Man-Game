@@ -6,7 +6,7 @@ import java.io.*;
 public class Main {
 	
 	public static void main(String Args[]) throws IOException{ 
-	File txt = new File("dictionary.txt");
+	File txt = new File("C:\\Users\\diogo\\git\\jogoDaForca\\JogoDaForca\\src\\JogoDaForca/dictionary.txt");
 	int lifes = 6;
 	Scanner scf  = new Scanner(txt);
 	
@@ -40,15 +40,31 @@ public class Main {
 	}
 	if(!found) {
 		lifes--;
-		System.out.println("OH! OH!You lost a life!Now you have" + lifes);
+		
 	}
+		boolean done = false;
 		for (int j = 0; j < ans.length; j++) {
 			if(ans[j] == '?') {
-				
+			System.out.println(" _");
+			done = true;
+			
+			}else {
+				System.out.println(""+ ans[j]);
 			}
 		
 		}
+		System.out.println("\n" + "Lives left" + " " +  lifes);
+		
+		if(done) {
+			System.out.println("Congrats you found the word.");
+			
+		}
 	
+		if(lifes <= 0) {
+		finished = true;
+		System.out.println("Oh oh you lost");
+			
+			}
 		}
 
 	}
